@@ -29,186 +29,110 @@
   }
   </style>
 
-<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-set-preferred-mode-onload="true">
-
-  
-  <!-- Page wrapper start -->
-  <div class="page-wrapper">
-  <!-- Sticky alerts (toasts), empty container -->
-    <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
-    <div class="sticky-alerts"></div>
-    
-    <!-- Content wrapper start -->
-    <div class="content-wrapper" id="content">
+<body>
+  <div class="page-wrapper with-navbar">
     <nav class="navbar">
-            <!-- big font on big screens-->
-            <a href="/" class="navbar-brand ml-10 hidden-sm-and-down">
-              Jonathan Adly
-            </a>
-            <!-- small font on small screens -->
-            <a href="/" class="navbar-brand ml-10 font-size-12 hidden-md-and-up">
-              Jonathan Adly
-            </a>
-            
-            <ul class="navbar-nav hidden-sm-and-down">
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link"> Projects </a>
-                </li>
-                <li class="nav-item">
-                 <a href="https://htmx-django.com" class="nav-link">Blog</a>
-                </li>
-            </ul>
-            <div class="navbar-content ml-auto">
-
-                <!-- Twitter button container 1 start -->
-                <div class="pt-5 mr-5 d-none d-lg-inline-block">
-                  <a href="https://twitter.com/Jonathan_Adly_"> <i class="fab fa-twitter"></i> </a>
-                    
-                </div>
-                <!-- Twitter button container 1 end -->
-
-                <div class="pt-5 mr-5 d-none d-lg-inline-block">
-                  <a href="https://www.linkedin.com/in/jonathan-adly/"> <i class="fab fa-linkedin"></i> </a>
-                    
-                </div>
-
-                <div class="pt-5 mr-5 d-none d-lg-inline-block">
-                  <a href="https://github.com/jonathan-Adly"> <i class="fab fa-github"></i> </a>
-                    
-                </div>
-
-                  <div class="custom-switch navbar-text mr-5 d-inline-block">      
+        <a href="/" class="navbar-brand ml-10 hidden-sm-and-down">
+          Jonathan Adly
+        </a>
+        <a href="/" class="navbar-brand ml-10 font-size-12 hidden-md-and-up">
+          Jonathan Adly
+        </a>
+        <div class="navbar-content ml-auto">
+            <div class="pt-5 mr-5 d-none d-lg-inline-block">
+              <a href="https://twitter.com/Jonathan_Adly_"> <i class="fab fa-twitter"></i> </a>
+            </div>
+            <div class="pt-5 mr-5 d-none d-lg-inline-block">
+              <a href="https://www.linkedin.com/in/jonathan-adly/"> <i class="fab fa-linkedin"></i> </a>
+            </div>
+            <div class="pt-5 mr-5 d-none d-lg-inline-block">
+              <a href="https://github.com/jonathan-Adly"> <i class="fab fa-github"></i> </a>
+            </div>
+            <div class="custom-switch navbar-text mr-5 d-inline-block">      
                 <input type="checkbox" id="switch-1" value="" onclick="halfmoon.toggleDarkMode()">
                 <label for="switch-1" class= "font-size-12" id="mode-switch">Dark Mode</label>
             </div>
-                
-                <div class="dropdown with-arrow hidden-md-and-up">
-                    <button class="btn navbar-menu-btn" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn" aria-haspopup="true" aria-expanded="false">
-                        <span class="text">Menu</span>
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-dropdown-toggle-btn">
-                        <a class="dropdown-item" href="#"> Blog </a>
-                        <a class="dropdown-item" href="#projects"> Projects </a>
-                        <div class="dropdown-divider"></div>
+            <div class="dropdown with-arrow hidden-md-and-up">
+                <button class="btn navbar-menu-btn" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn" aria-haspopup="true" aria-expanded="false">
+                    <span class="text">Menu</span>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-dropdown-toggle-btn">
+                    <div class="dropdown-divider"></div>
                         <div class="pt-5">
-                           <a class="ml-5" href="https://twitter.com/Jonathan_Adly_"> <i class="fab fa-twitter"></i> </a>
-                           <a class= "ml-5" href="https://www.linkedin.com/in/jonathan-adly/"> <i class="fab fa-linkedin"></i> </a>
+                            <a class="ml-5" href="https://twitter.com/Jonathan_Adly_"> <i class="fab fa-twitter"></i> </a>
+                            <a class= "ml-5" href="https://www.linkedin.com/in/jonathan-adly/"> <i class="fab fa-linkedin"></i> </a>
                             <a class= "ml-5" href="https://github.com/jonathan-Adly"> <i class="fab fa-github"></i> </a>
                         </div>
-                  
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <div class="content-wrapper" id="content">
+            <div class="container-fluid">
+                <div class="text-center row align-items-center justify-content-center h-75">
+                    <div class= "content col-6"> 
+                    <p class="m-20 font-weight-bold font-size-20 pt-20"> 
+                        Hello, I’m Jonathan. I use this space to write about my experiences with software development.
+                    </p>
+                
+                    </div>
+                </div>
+            </div>
+            
 
+            <div class= "content text-center">
+                <h2> Blog </h2>
+                
+                <div class="row w-full row-eq-spacing" id="blog">
+                    <div class="col">
+                        <div class="card m-5">
+                            <div class="content" id="title">
+                                <h5 class="content-title"> HTML is all you need </h5>
+                                <p class="text-muted"> using htmx with mock-html to get a github gists as API.</p>
+                                <a hx-get='https://html-mock.fly.dev/gist/5832e5ad4ecbd9ebdaa82d4b6aea682f' 
+                                    hx-target="#results" 
+                                    class="btn btn-primary"
+                                    _="on click remove #title"
+                                    > 
+                                        Read
+                                </a>
+                                    
+                              
+                            </div>
+                            <div id="results" class="text-left overflow-auto"> </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
 
-<!-- main section -->
-<div class="container-fluid">
-    <div class="text-center row align-items-center justify-content-center h-75">
-        <div class= "content col-6"> 
-        <img src="static/jonathan.jpeg" class="img-fluid rounded-circle w-300" alt="jonathan" >
-        <p class="m-20 font-weight-bold font-size-20"> 
-            Hello, I’m Jonathan. I’m a software developer and a pharmacist. You can contact me on <a href="https://twitter.com/Jonathan_Adly_" >Twitter </a>.
-        </p>
-       
+            <!-- Footer -->
+            <div class="row justify-content-center text-muted"> 
+                Copyright © Jonathan Adly <span id="year"> </span> 
+                <script>
+                    const currentYear = new Date().getFullYear();
+                    document.getElementById("year").innerHTML = currentYear;
+                </script>
+            </div>
+            
+            <div class="row justify-content-center text-muted">
+                <p> Built with joy in Bear, Delaware, USA. <svg width="1em" height="1em" viewBox="0 0 16 16"
+                class="bi bi-suit-heart-fill" fill="#FF3C38" xmlns="http://www.w3.org/2000/svg">
+                <path
+                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+                </svg> </p>
+            </div>
+
+         </div>
         </div>
     </div>
-</div>
 
-<!-- Projects -->
-<div class= "content text-center">
-    <h2> Personal projects </h2>
-            <div class="row w-full row-eq-spacing" id="projects">
-                <div class="col-sm-4">
-                        <div class="card text-center m-5">
-                            <img src="static/svg4.svg" class="img-fluid rounded-top" alt="a gifting platform">
-                            <div class="content text-center">
-                                <h5 class="content-title">Joyful.gifts</h5>
-                                <p class="text-muted"> An automated gifting platform. </p>
-
-                                <div class="text-center">
-                                    <a href="https://joyful.gifts" class="btn btn-primary" target="_blank"> Live
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card text-center m-5">
-                            <img class="img-fluid rounded-top" src="static/historyofthecopts.png" alt="cross">
-                            <div class="content">
-                                <h5 class="content-title">History of the Copts</h5>
-                                <p class="text-muted"> A Visual History Storyboard Inspired by a Podcast</p>
-                                <div class="text-center">
-                                    <a href="https://historyofthecopts.com/" class="btn btn-primary" target="_blank">
-                                        Live
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4">
-                        <div class="card text-center m-5">
-                            <img class="img-fluid rounded-top" src="static/church.jpg" alt="church">
-                            <div class="content">
-                                <h5 class="content-title text-wrap">Church Memebership Portal</h5>
-                                <p class="text-muted">A membership management web application for a church to manage events and restrictions during the COVID pandemic</p>
-                                <div class="text-center">
-                                    <a href="https://www.stmaryde.org" class="btn btn-primary"
-                                        target="_blank"> Live
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="card text-center m-5">
-                            <img class="img-fluid rounded-top" src="static/copticvoice.png" alt="copticvoice">
-                            <div class="content">
-                                <h5 class="content-title">Coptic Voice</h5>
-                                <p class="text-muted">A non-profit organization to amplify the voice of the
-                                    Copts</p>
-                                <div class="text-center">
-                                    <a href="https://copticvoice.herokuapp.com/" class="btn btn-primary"
-                                        target="_blank"> Live
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
-
-
-
-
-<!-- Footer -->
-<div class="row justify-content-center text-muted"> 
-Copyright © Jonathan Adly 2021 
-</div>
-            
-<div class="row justify-content-center text-muted">
-<p> Built with joy in Bear, Delaware, USA. <svg width="1em" height="1em" viewBox="0 0 16 16"
-        class="bi bi-suit-heart-fill" fill="#FF3C38" xmlns="http://www.w3.org/2000/svg">
-        <path
-        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-        </svg> </p>
-</div>
-
-
-
-    <!-- Content wrapper end -->
-
-  </div>
-  <!-- Page wrapper end -->
-
-  
-  <!-- Halfmoon JS -->
-<script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
-
+    <!-- Halfmoon JS -->
+     <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+    <!-- htmx -->
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.9"></script>
 </body>
 </html>
