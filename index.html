@@ -69,9 +69,10 @@
             </div>
         </div>
     </nav>
-    <div class="content-wrapper" id="content">
-            <div class="container-fluid">
-                <div class="text-center row align-items-center justify-content-center h-75">
+    <div class="content-wrapper">
+        <br>
+            <div class="container-fluid m-20 p-20" id="content">
+                <div class="text-center row align-items-center justify-content-center">
                     <div class= "content col-6"> 
                     <p class="m-20 font-weight-bold font-size-20 pt-20"> 
                         Hello, I’m Jonathan. I use this space to write about my experiences with software development.
@@ -81,30 +82,25 @@
                 </div>
             </div>
             
-
             <div class= "content text-center">
-                <h2> Blog </h2>
-                
                 <div class="row w-full row-eq-spacing" id="blog">
                     <div class="col">
                         <div class="card m-5">
                             <div class="content" id="title">
                                 <h5 class="content-title"> HTML is all you need </h5>
-                                <p class="text-muted"> using htmx with mock-html to get a github gists as API.</p>
+                                <p class="text-muted"> using htmx with mock-html to get a github gists as html fragments.</p>
                                 <a hx-get='https://html-mock.fly.dev/gist/5832e5ad4ecbd9ebdaa82d4b6aea682f' 
-                                    hx-target="#results" 
+                                    hx-target="#content" 
                                     class="btn btn-primary"
-                                    _="on click remove #title"
                                     > 
                                         Read
                                 </a>
                                     
                               
                             </div>
-                            <div id="results" class="text-left overflow-auto"> </div>
+                           
                         </div>
                     </div>
-            
                 </div>
             </div>
 
